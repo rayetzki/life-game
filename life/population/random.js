@@ -1,8 +1,5 @@
 import { createAgent } from "../../life/agent.js";
-
-export function range(size) {
-  return Array.from({ length: size }, (_, index) => index);
-}
+import { range } from "../../utils.js";
 
 export function populateRandom(rows, columns) {
   const population = {};
