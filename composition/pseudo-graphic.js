@@ -1,9 +1,6 @@
 import { createAgent } from "../life/agent.js";
 import { exists } from "../utils.js";
-
-export const LINE_BREAK = "\n";
-export const LIVE_AGENT = "O";
-export const EMPTY_STRING = "";
+import { LINE_BREAK, EMPTY_STRING, LIVE_AGENT } from "./const.js";
 
 export function fromPseudoGraphics(source) {
   return source

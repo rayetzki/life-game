@@ -1,5 +1,5 @@
-import { createAgent } from "../../life/agent.js";
 import { range } from "../../utils.js";
+import { createAgent } from "../agent.js";
 
 export function populateRandom(rows, columns) {
   const population = {};

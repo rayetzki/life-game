@@ -1,9 +1,9 @@
 import { fromPseudoGraphics } from "./composition/pseudo-graphic.js";
 import { Drawer } from "./dom/drawer.js";
-import { GLIDER_GUN } from './life/population/patterns/gliderGun.js';
+import { GLIDER_GUN_P60 } from './life/population/patterns/gliderGunP60.js';
 import { World } from "./life/world.js";
 
-const population = fromPseudoGraphics(GLIDER_GUN);
+const population = fromPseudoGraphics(GLIDER_GUN_P60);
 const drawer = new Drawer(10);
 const world = new World(drawer.rows, drawer.columns, population);
 
@@ -15,5 +15,5 @@ function liveGeneration() {
 
 (function gameLoop() {
   liveGeneration();
-  setTimeout(() => window.requestAnimationFrame(gameLoop), 200);
+  setTimeout(() => window.requestAnimationFrame(gameLoop), 60);
 })();

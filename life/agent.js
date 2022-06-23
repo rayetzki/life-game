@@ -1,3 +1,5 @@
+import { SEPARATOR } from "../composition/const.js";
+
 export function createAgent(x, y) {
   return { x, y };
 }
@@ -21,7 +23,7 @@ export function neighborsOf({ x, y }) {
 }
 
 export function isAlive(agent, population) {
-  return !!population[`${agent.x}:${agent.y}`];
+  return !!population[`${agent.x}${SEPARATOR}${agent.y}`];
 }
 
 export function countAliveAround(agent, population) {
